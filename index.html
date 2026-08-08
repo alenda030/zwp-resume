@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>曾吴平 · 个人简历</title>
+<meta name="description" content="曾吴平的个人简历 · 行业运营 / 网络与新媒体" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Outfit:wght@200..800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- 颗粒质感层 -->
+<div class="grain"></div>
+<!-- 自定义光标 -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- 顶部滚动进度 -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- 载入动画 -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <span class="loader-hi">Hello, 我是</span>
+    <span class="loader-name">曾吴平</span>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<!-- 3D 进入入口 -->
+<div class="enter-screen" id="enterScreen">
+  <div class="enter-bg">
+    <span class="enter-blob eb1"></span>
+    <span class="enter-blob eb2"></span>
+    <span class="enter-blob eb3"></span>
+  </div>
+  <div class="enter-stage">
+    <div class="enter-rings">
+      <span class="ering r1"></span>
+      <span class="ering r2"></span>
+      <span class="ering r3"></span>
+    </div>
+    <div class="enter-avatar">
+      <img src="assets/avatar-3d.png" alt="曾吴平 · 3D 动漫形象" draggable="false" />
+    </div>
+    <span class="orbit-dot od1"></span>
+    <span class="orbit-dot od2"></span>
+    <span class="orbit-dot od3"></span>
+  </div>
+  <div class="enter-copy">
+    <span class="enter-hi">✦ WELCOME TO MY WORLD ✦</span>
+    <h2 class="enter-title">来到我的世界</h2>
+    <p class="enter-sub">Hi，我是曾吴平 · 一个热爱生活的运营人</p>
+    <button class="enter-btn magnetic" id="enterBtn"><span>点击进入</span><i>→</i></button>
+    <span class="enter-tip">Click to enter</span>
+  </div>
+</div>
+
+<!-- 侧边导航 -->
+<nav class="side-nav" id="sideNav">
+  <a href="#hero" class="nav-dot active" data-label="首页"><span></span></a>
+  <a href="#about" class="nav-dot" data-label="个人介绍"><span></span></a>
+  <a href="#education" class="nav-dot" data-label="教育经历"><span></span></a>
+  <a href="#work" class="nav-dot" data-label="工作经历"><span></span></a>
+  <a href="#hobby" class="nav-dot" data-label="兴趣爱好"><span></span></a>
+</nav>
+
+<!-- 顶栏 -->
+<header class="topbar" id="topbar">
+  <div class="brand">
+    <img class="brand-photo" src="assets/id-photo.jpg" alt="曾吴平 证件照" />
+    <div class="brand-info">
+      <span class="brand-name">曾吴平</span>
+      <span class="brand-contact">
+        <a href="tel:13711047289">📞 13711047289</a>
+        <a href="mailto:1833438105@qq.com">✉ 1833438105@qq.com</a>
+      </span>
+    </div>
+  </div>
+  <nav class="topnav" id="topNav">
+    <a href="#hero" data-sec="hero">首页</a>
+    <a href="#about" data-sec="about">个人介绍</a>
+    <a href="#education" data-sec="education">教育经历</a>
+    <a href="#work" data-sec="work">工作经历</a>
+    <a href="#hobby" data-sec="hobby">兴趣爱好</a>
+  </nav>
+  <a class="topbar-cta magnetic" href="assets/曾吴平-简历.pdf" download>
+    <span>下载简历</span>
+    <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 3v10.6l3.3-3.3 1.4 1.4L12 17.4l-4.7-5.7 1.4-1.4L12 13.6V3h0zM5 19h14v2H5z"/></svg>
+  </a>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="line"><span class="word">你好，</span></span>
+        <span class="line"><span class="word">我是</span> <span class="word accent">曾吴平</span></span>
+      </h1>
+      <p class="hero-sub hero-sub-oneline reveal">用数据驱动增长，用内容连接用户 —— 一个热爱生活的运营人。</p>
+      <div class="hero-tags reveal">
+        <span>行业运营</span><span>用户运营</span><span>增长策略</span><span>产品运营</span><span>AI agent 应用</span><span>市场营销</span><span>达人运营</span>
+      </div>
+      <div class="hero-actions reveal">
+        <a href="#about" class="btn btn-primary magnetic">开始了解我 ↓</a>
+        <a href="assets/曾吴平-简历.pdf" download class="btn btn-ghost magnetic">下载 PDF 简历</a>
+      </div>
+    </div>
+    <div class="hero-marquee">
+      <div class="marquee-track">
+        <span>字节跳动 · 餐饮行业运营</span><span>✦</span><span>美团 · 消费电子行业运营</span><span>✦</span><span>小红书 · AI 产品用户运营</span><span>✦</span><span>同程旅行 · 内容运营</span><span>✦</span><span>盛趣游戏 · 游戏运营</span><span>✦</span>
+        <span>字节跳动 · 餐饮行业运营</span><span>✦</span><span>美团 · 消费电子行业运营</span><span>✦</span><span>小红书 · AI 产品用户运营</span><span>✦</span><span>同程旅行 · 内容运营</span><span>✦</span><span>盛趣游戏 · 游戏运营</span><span>✦</span>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="向下滚动"><span class="mouse"><i></i></span></a>
+  </section>
+
+  <!-- ABOUT / 个人介绍 -->
+  <section class="section about" id="about">
+    <div class="sec-head reveal">
+      <span class="sec-index">01</span>
+      <h2 class="sec-title">个人介绍</h2>
+      <span class="sec-sub">About Me</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <p class="about-lead">嗨，我是 <b>曾吴平</b> 👋</p>
+        <p class="about-text">
+          我曾在 <b>字节跳动、美团、小红书、同程旅行、盛趣游戏</b> 等公司实习，
+          覆盖行业运营、增长策略与用户增长等方向，既做过增长策略制定、活动与节点运营，
+          也负责过内容生态搭建与用户运营。
+        </p>
+        <p class="about-text">
+          熟悉 <b>SQL</b> 数据分析，能通过数据洞察发现问题并推动落地；同时关注 AI 前沿应用，
+          有 <b>Agent 与 Skill 搭建</b> 的实践经验，具备较强的策略思维、内容理解与跨团队协作能力。
+        </p>
+        <p class="about-text about-persona">
+          性格上 <b>外向开朗、勤于思考</b>，主动且能抗压 💪
+        </p>
+        <div class="about-skills">
+          <span class="skills-label">技能栈</span>
+          <div class="skill-tags">
+            <span>SQL</span><span>Python</span><span>Excel</span><span>即梦</span>
+            <span>Codex</span><span>Claude Code</span><span>PS</span><span>PR</span><span>剪映</span>
+            <span>秀米</span><span>英语 CET-6</span>
+          </div>
+        </div>
+        <div class="about-meta">
+          <a href="mailto:1833438105@qq.com" class="meta-item magnetic"><i>✉</i> 1833438105@qq.com</a>
+          <a href="tel:13711047289" class="meta-item magnetic"><i>📞</i> 13711047289</a>
+          <span class="meta-item"><i>📍</i> 全国可飞</span>
+          <div class="wechat-wrap">
+            <button type="button" class="meta-item wechat-btn magnetic" id="wechatBtn"><i>💬</i> 微信 · 点击展开二维码</button>
+            <div class="wechat-qr" id="wechatQr">
+              <img src="assets/wechat-qr.jpg" alt="曾吴平 微信二维码" />
+              <span>扫码添加我的微信 💚</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-media reveal">
+        <!-- 叠放可滑动照片 -->
+        <div class="photo-deck" id="photoDeck">
+          <div class="deck-card" data-i="0">
+            <img src="assets/photo-universal.jpg" alt="生活照" draggable="false" />
+          </div>
+          <div class="deck-card" data-i="1">
+            <img src="assets/photo-xhs.jpg" alt="生活照" draggable="false" />
+          </div>
+          <div class="deck-card" data-i="2">
+            <img src="assets/photo-meituan.jpg" alt="生活照" draggable="false" />
+          </div>
+          <div class="deck-hint">← 拖动 / 点击切换 →</div>
+        </div>
+
+        <!-- 简历卡片：点击展开 / 下载 -->
+        <div class="resume-card magnetic" id="resumeCard">
+          <img src="assets/resume.png" alt="简历预览" />
+          <div class="resume-overlay">
+            <span class="resume-icon">🔍</span>
+            <span class="resume-txt">点击放大 · 下载 PDF</span>
+          </div>
+          <div class="resume-bar"><span>📄 我的完整简历</span><span class="resume-bar-cta">点击查看 →</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION / 教育经历 -->
+  <section class="section education" id="education">
+    <div class="sec-head reveal">
+      <span class="sec-index">02</span>
+      <h2 class="sec-title">教育经历</h2>
+      <span class="sec-sub">Education</span>
+    </div>
+    <div class="timeline">
+      <article class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <h3>上海体育大学 <span class="badge">双一流</span></h3>
+            <span class="tl-date">2024.09 – 2027.06</span>
+          </div>
+          <p class="tl-role">新闻传播学 · 研究生 <span class="gpa">绩点 4.0 · 前 5%</span></p>
+          <p class="tl-desc">主修：新闻采访与写作、智能传播学等</p>
+          <p class="tl-honor"><i>🏅</i> 学生会主席（获校级三等奖学金）</p>
+        </div>
+      </article>
+      <article class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-top">
+            <h3>华南师范大学 <span class="badge">211</span></h3>
+            <span class="tl-date">2020.09 – 2024.06</span>
+          </div>
+          <p class="tl-role">网络与新媒体 · 本科 <span class="gpa">绩点 3.94 · 前 20%</span></p>
+          <p class="tl-desc">主修：新媒体数据分析与应用、Python、SQL、新媒体产品设计与项目管理等</p>
+          <p class="tl-honor"><i>🏅</i> 班长、兼职班主任、义教服务队队长（获创新创业大赛优秀奖、优秀学生干事等）</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- WORK / 工作经历 -->
+  <section class="section work" id="work">
+    <div class="sec-head reveal">
+      <span class="sec-index">03</span>
+      <h2 class="sec-title">工作经历</h2>
+      <span class="sec-sub">Experience</span>
+    </div>
+    <div class="work-list" id="workList">
+      <article class="work-item reveal" data-company="bytedance">
+        <div class="work-head">
+          <div class="work-logo">字节</div>
+          <div class="work-title">
+            <h3>字节跳动 <span class="work-tag">行业运营 · 抖音生活服务-餐饮</span></h3>
+            <span class="work-date">2026.07 – 至今</span>
+          </div>
+          <button class="work-toggle" aria-label="展开/收起"></button>
+        </div>
+        <div class="work-body">
+          <p class="work-intro">围绕快餐小吃品类，负责行业增长策略、商品供给洞察、活动项目运营等，支持商家提升商品、流量与经营效率。</p>
+          <ul>
+            <li><b>增长策略：</b>SQL 下钻交易体裁识别搜索支付贡献，制定工作餐策略（短视频带看后搜、补贴提 OPM、打造「元气星期三」营销 IP），推动 GMV 同比 <b>+7.3%</b>。</li>
+            <li><b>节点运营：</b>针对暑期大促，基于交易时段与场景消费识别增量，参与夜宵、即送等场景化策略；设计商家分层激励并搭建招商达成漏斗表。</li>
+            <li><b>商品供给洞察：</b>输出行业周度商品分析，围绕支付增量、新品与场景货盘识别机会，引导商家提升供给质量与转化。</li>
+            <li><b>商家运营：</b>跟进绝味鸭脖等头客运营，下钻品牌 H1 业绩，归因份额波动并提增长策略，沉淀可复用 t2t 复盘 skill。</li>
+            <li><b>看板搭建：</b>用 iDA Agent 搭建交易 / 商品洞察看板，生成可视化解读卡片并自动推送。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="work-item reveal" data-company="meituan">
+        <div class="work-head">
+          <div class="work-logo">美团</div>
+          <div class="work-title">
+            <h3>美团 <span class="work-tag">行业运营 · 消费电子</span></h3>
+            <span class="work-date">2026.02 – 2026.06</span>
+          </div>
+          <button class="work-toggle" aria-label="展开/收起"></button>
+        </div>
+        <div class="work-body">
+          <p class="work-intro">围绕消费电子行业增长场景，通过搜索优化、产品提需、AI Agent 建设及供给运营，推动用户转化与业务增长。</p>
+          <ul>
+            <li><b>商业化营销：</b>主导 618 等行业大促策划，制定品牌商业化分层投放策略；搭建预算-消耗看板，基于历史消耗节奏调整活动周期与券策略；统筹会场搭建及资源位投放，最终达成<b>日均 UV 曝光 +150%，GTV 环比 +21.5%</b>。</li>
+            <li><b>KA 运营：</b>对接 3C / 家电 / 电动车行业 KA，统筹品牌供给与节点营销；参与华为新品首发、美团骑士日×vivo、吾悦神券 Mall 等项目，通过资源置换撬动品牌供给，实现<b>活动曝光 500w+，实付 GTV 1000w+</b>。</li>
+            <li><b>AI 产品运营：</b>基于 Catdesk Agent 搭建美的智能客服，通过 Prompt 生成多场景服务工作流并实现自动优化；参与搜索运营 Agent 建设，落地搜索策略配置、资源位推荐及搜索词优化等 Skill，<b>运营效率提升 40%</b>。</li>
+            <li><b>搜推策略运营：</b>基于搜索数据迭代核心词表并分层运营，推动供给上翻与周度追踪机制，协同算法与产品优化召回，推进 SUG 直跳与白名单配置；配套搜索标签化与供给内容亮化，达成<b>全行业搜索 CTR +30%</b>。</li>
+            <li><b>产品提需：</b>基于 SQL 下钻搜索行为数据及商家调研，挖掘国补流量承接机会，独立撰写国补标签展示 MRD 并推动需求落地；同时推动搜索发券、POI 接入神券等产品优化，<b>券领取效率提升 300%</b>。</li>
+            <li><b>供给策略优化：</b>运用 SQL 分析特价团供给及交易数据，挖掘潜力爆品，迭代供给策略，推动<b>日均支付订单提升 150%</b>。</li>
+            <li><b>A/B Test：</b>参与行业神券接入团购频道的 A/B Test，围绕 PV、GMV 等指标验证神券对交易转化的影响。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="work-item reveal" data-company="xhs">
+        <div class="work-head">
+          <div class="work-logo">小红书</div>
+          <div class="work-title">
+            <h3>小红书 <span class="work-tag">AI 产品用户运营 · 创新产品组</span></h3>
+            <span class="work-date">2025.08 – 2025.12</span>
+          </div>
+          <button class="work-toggle" aria-label="展开/收起"></button>
+        </div>
+        <div class="work-body">
+          <p class="work-intro">参与"S 级项目"：针对某 AI 旅行规划 APP，通过达人运营、活动运营、用户运营、KOS 运营等手段实现用户增长。</p>
+          <ul>
+            <li><b>用户增长：</b>参与产品新功能推广，运用 Figma 搭建活动页与 Push 触达 UGC，实现笔记量产。累计<b>拉新用户超 5w+，DAU 破 10w+</b>；活动话题下累计发布笔记 1.2w 篇，总曝光量 <b>5587w+</b>，CES 达 98w+。</li>
+            <li><b>运营策略优化：</b>通过 SQL 调取新功能链路各环节转化漏斗数据，调整运营策略：从单一功能推广转向"新功能+核心功能"联动，提升用户触达与转化效率。</li>
+            <li><b>达人运营：</b>独立完成达人筛选、建联、Brief 撰写、合作及投流全链路。累计建联达人 <b>500+</b>，共发布合作笔记 584 篇，爆款笔记 400+，累计曝光 <b>2e</b>，整体 CES 达 150w。</li>
+            <li><b>KOS 运营：</b>从 0-1 搭建产品 KOS 矩阵，累计独立发布笔记 100+ 篇，<b>总曝光量达 2000w</b>，账号累计粉丝数突破 5w+。</li>
+            <li><b>活动运营：</b>深度参与产品新功能×马路生活节等线上线下活动策划。实时复盘拉新数据，迭代站内玩法及推广策略。</li>
+            <li><b>社群运营：</b>通过人群包分层创作者，引导加入社群及共创；维护 <b>30+</b> 旅行、本地生活、数码等垂类社群运营及促产。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="work-item reveal" data-company="shengqu">
+        <div class="work-head">
+          <div class="work-logo">盛趣</div>
+          <div class="work-title">
+            <h3>盛趣游戏 <span class="work-tag">游戏运营与市场实习生 · 永恒之塔项目组</span></h3>
+            <span class="work-date">2025.06 – 2025.08</span>
+          </div>
+          <button class="work-toggle" aria-label="展开/收起"></button>
+        </div>
+        <div class="work-body">
+          <p class="work-intro">围绕《永恒之塔》项目，从 0-1 搭建官方新媒体阵地，通过内容创作、市场活动执行与玩家舆情运营，提升游戏声量与玩家活跃。</p>
+          <ul>
+            <li><b>账号运营：</b>从 0-1 独立策划并搭建官方小红书账号，负责内容选题、创作与发布，成功启动官方阵地；同时负责抖音账号内容策划与剪辑，制作游戏升级教程、直播预告等短视频，<b>均条浏览量破 1w+，涨粉破 5k+</b>。</li>
+            <li><b>市场活动执行支持：</b>协助 ChinaJoy 展会、罗森联名活动及游戏主题餐厅活动的落地执行，包括物料设计整理、Coser 对接与管理，并策划微博抽奖活动提升玩家参与热情，保障活动顺利开展并增强玩家互动。</li>
+            <li><b>微信公众号运营：</b>负责游戏活动推送内容的排版与发布，<b>平均阅读量破 8k+</b>，有效提升玩家活动触达率与参与度。</li>
+            <li><b>外发新闻稿撰写：</b>撰写开服、电竞赛报名等新闻稿件，并制作配套广告位插图，具备较强的文案撰写能力。</li>
+            <li><b>游戏舆情监测与反馈：</b>在玩家社群及游戏内世界聊天频道收集玩家意见，监测敏感话题与潜在风险，及时反馈优化建议。</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="work-item reveal" data-company="tongcheng">
+        <div class="work-head">
+          <div class="work-logo">同程</div>
+          <div class="work-title">
+            <h3>同程旅行 <span class="work-tag">内容运营 · 用户增长组</span></h3>
+            <span class="work-date">2025.03 – 2025.07</span>
+          </div>
+          <button class="work-toggle" aria-label="展开/收起"></button>
+        </div>
+        <div class="work-body">
+          <p class="work-intro">基于 AIGC 生成短视频与图文，为同程旅行 APP、海外酒旅 APP（Azgo）、差旅 APP（艺龙旅行）规模化拉新。</p>
+          <ul>
+            <li><b>AI 内容生产：</b>运用即梦等 AI 产品生成短视频及图文，通过笔记植入酒店广告，<b>日产笔记 30+，累计订单成交 1w+</b>。</li>
+            <li><b>KOL 合作：</b>通过蒲公英平台筛选 KOL 并建联，成功对接 <b>100+ 达人</b>，促成酒店产品内容种草与转化。</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOBBY / 兴趣爱好 -->
+  <section class="section hobby" id="hobby">
+    <div class="sec-head reveal">
+      <span class="sec-index">04</span>
+      <h2 class="sec-title">兴趣爱好</h2>
+      <span class="sec-sub">Life & Fun</span>
+    </div>
+    <div class="hobby-cloud">
+      <span class="bubble" data-emoji="📔">做手帐</span>
+      <span class="bubble" data-emoji="🎮">玩游戏</span>
+      <span class="bubble" data-emoji="🍜">探店</span>
+      <span class="bubble" data-emoji="✈️">旅游</span>
+      <span class="bubble" data-emoji="📚">看小说电影</span>
+      <span class="bubble" data-emoji="🎬">拍摄剪辑</span>
+    </div>
+
+    <!-- 自媒体作品 -->
+    <div class="media-head reveal">
+      <span class="media-kicker">✦ 我的自媒体作品 ✦</span>
+      <p class="media-desc">爱记录、爱分享，把热爱过成内容 —— 点开手机看看我的主页 👇</p>
+    </div>
+    <div class="media-works">
+      <a class="phone-card reveal" href="https://xhslink.cn/m/6Jd62yAU38J" target="_blank" rel="noopener">
+        <div class="phone">
+          <span class="phone-notch"></span>
+          <div class="phone-screen">
+            <img src="assets/work-xhs-1.jpg" alt="小红书作品预览" draggable="false" />
+            <span class="phone-brand xhs">📕 小红书</span>
+          </div>
+        </div>
+        <div class="phone-cap">
+          <span class="pc-tag xhs">小红书主页</span>
+          <p>我在小红书收获了 <b>909 次</b>赞与收藏，来看看我的主页 &gt;&gt;</p>
+        </div>
+      </a>
+
+      <a class="phone-card reveal" href="https://weixin.qq.com/sph/AZVyQpgzxQ" target="_blank" rel="noopener">
+        <div class="phone">
+          <span class="phone-notch"></span>
+          <div class="phone-screen">
+            <img src="assets/video-cover.jpg" alt="短视频作品预览" draggable="false" />
+            <span class="phone-brand sph">▶ 视频号</span>
+            <span class="phone-play"><svg viewBox="0 0 24 24" width="26" height="26"><path fill="#fff" d="M8 5v14l11-7z"/></svg></span>
+          </div>
+        </div>
+        <div class="phone-cap">
+          <span class="pc-tag sph">短视频创作</span>
+          <p>用镜头记录生活与热爱，点开看看我的 <b>视频号作品</b> ▶</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-big">谢谢观看，期待与你相遇 ✨</p>
+    <div class="footer-links">
+      <a href="mailto:1833438105@qq.com" class="magnetic">✉ 1833438105@qq.com</a>
+      <a href="assets/曾吴平-简历.pdf" download class="magnetic">⬇ 下载 PDF 简历</a>
+    </div>
+    <p class="footer-copy">© 2026 曾吴平 · Made with 🌿</p>
+  </footer>
+</main>
+
+<!-- 简历放大弹窗 -->
+<div class="modal" id="resumeModal">
+  <div class="modal-backdrop"></div>
+  <div class="modal-panel">
+    <button class="modal-close" id="modalClose" aria-label="关闭">✕</button>
+    <div class="modal-scroll"><img src="assets/resume.png" alt="完整简历" /></div>
+    <a href="assets/曾吴平-简历.pdf" download class="modal-download magnetic">⬇ 下载 PDF 版简历</a>
+  </div>
+</div>
+
+<!-- 作品大图查看 -->
+<div class="modal" id="imgLightbox">
+  <div class="modal-backdrop"></div>
+  <div class="lightbox-panel">
+    <button class="modal-close" id="lightboxClose" aria-label="关闭">✕</button>
+    <img id="lightboxImg" src="" alt="作品大图" />
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
