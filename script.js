@@ -284,6 +284,23 @@ window.addEventListener('mousemove', e => {
   document.addEventListener('keydown', e => { if (e.key === 'Escape') hideLb(); });
 })();
 
+/* ===================== 顶栏证件照点击弹微信二维码 ===================== */
+(function(){
+  var photo = document.getElementById('brandPhoto');
+  var lb = document.getElementById('imgLightbox');
+  if (!photo || !lb) return;
+  var lbImg = document.getElementById('lightboxImg');
+  var open = function(){ lbImg.src = 'assets/wechat-qr.jpg'; lbImg.alt = '曾吴平 微信二维码'; lb.classList.add('open'); document.body.style.overflow = 'hidden'; };
+  var hide = function(){ lb.classList.remove('open'); document.body.style.overflow = ''; };
+  photo.style.cursor = 'pointer';
+  photo.addEventListener('click', open);
+  var closeBtn = document.getElementById('lightboxClose');
+  if (closeBtn) closeBtn.addEventListener('click', hide);
+  var bd = lb.querySelector('.modal-backdrop');
+  if (bd) bd.addEventListener('click', hide);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') hide(); });
+})();
+
 /* ===================== 安全兜底：确保所有内容最终可见 ===================== */
 /* hero 的 reveal 依赖 window.load（会等大图加载），大图较慢时可能迟迟不显示；
    这里在脚本解析后 1.1s 强制显示全部 reveal 与关闭载入层，动画若已提前触发不受影响。 */
